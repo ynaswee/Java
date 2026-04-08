@@ -1,0 +1,224 @@
+Sure! 👍 Gagawan kita ng **clean, ready-to-use PPT outline (10–15 slides)** based sa requirements sa image mo. Naka-structure na siya para madali mong i-explain sa defense.
+
+---
+
+# 🎤 PPT OUTLINE (DELIVERY PACKAGE MANAGER)
+
+---
+
+## 🟣 SLIDE 1: Title Slide
+
+* Project Title: **Delivery Package Manager using Bubble Sort**
+* Members
+* Subject / Instructor
+* Date
+
+---
+
+## 🟣 SLIDE 2: Introduction
+
+* Brief overview ng program
+* Purpose:
+
+  * Manage delivery packages
+  * Sort packages using bubble sort
+* Language used: Java
+
+---
+
+## 🟣 SLIDE 3: Actual Prompt
+
+* Ilagay yung final prompt niyo (shortened version)
+* Highlight key requirements:
+
+  * Package class (ID, Name, Weight)
+  * Bubble sort
+  * Menu-driven program
+  * Validation & formatting
+
+---
+
+## 🟣 SLIDE 4: How the Idea Was Formed
+
+* Bakit napili ang concept:
+
+  * Real-world application (delivery/logistics)
+  * Madaling i-relate
+* Why bubble sort:
+
+  * Simple and easy to implement
+  * Good for learning sorting basics
+
+---
+
+## 🟣 SLIDE 5: Program Overview
+
+* Menu-based system:
+
+  * Add Package
+  * Sort Packages
+  * Display Packages
+* Uses `ArrayList` to store data
+
+---
+
+# 🔵 IMPLEMENTATION NG SORTING ALGORITHM
+
+## 🟣 SLIDE 6: What is Bubble Sort?
+
+* Definition:
+
+  * Compares adjacent elements
+  * Swaps if needed
+* Repeats until sorted
+
+---
+
+## 🟣 SLIDE 7: Bubble Sort Logic (Simple Flow)
+
+* Loop through list
+* Compare adjacent items
+* Swap if condition is true
+* Repeat
+
+👉 Pwede ka maglagay ng simple diagram dito
+
+---
+
+## 🟣 SLIDE 8: Bubble Sort in Code
+
+* Show snippet:
+
+```java
+for (int i = 0; i < packages.size() - 1; i++) {
+    for (int j = 0; j < packages.size() - i - 1; j++) {
+        if (swap) {
+            // swap logic
+        }
+    }
+}
+```
+
+* Explain:
+
+  * outer loop = passes
+  * inner loop = comparisons
+
+---
+
+## 🟣 SLIDE 9: Sorting Criteria
+
+* User can sort by:
+
+  * ID
+  * Recipient Name
+  * Weight
+* Ascending / Descending
+
+---
+
+# 🟢 OBJECT-ORIENTED PROGRAMMING
+
+## 🟣 SLIDE 10: Encapsulation
+
+* Fields are private:
+
+  * id, name, weight
+* Accessed via getters
+
+👉 Key line:
+
+> Protects data and controls access
+
+---
+
+## 🟣 SLIDE 11: Abstraction
+
+* Methods used:
+
+  * `addPackage()`
+  * `sortPackages()`
+  * `displayPackages()`
+
+👉 User doesn’t see internal logic
+
+---
+
+## 🟣 SLIDE 12: Object Interaction
+
+* `Package` = data model
+* `ArrayList` = storage
+* `DeliveryManager` = controller
+
+Flow:
+
+```
+User → Menu → Methods → Package Objects
+```
+
+---
+
+## 🟣 SLIDE 13: toString() Usage
+
+* Used for formatted display
+* Example:
+
+```java
+System.out.println(p);
+```
+
+👉 Automatically calls `toString()`
+
+---
+
+# 🟡 DATA STRUCTURE
+
+## 🟣 SLIDE 14: Data Structure Used
+
+* `ArrayList<Package>`
+* Why:
+
+  * Dynamic size
+  * Easy to access and modify
+
+---
+
+## 🟣 SLIDE 15: Data Organization
+
+* Each package = object
+* Stored inside ArrayList
+* Sorted using bubble sort
+
+---
+
+# 🔴 OPTIONAL FINAL SLIDE
+
+## 🟣 SLIDE 16: Conclusion
+
+* Learned:
+
+  * Bubble sort implementation
+  * OOP principles
+  * Data structuring
+* Possible improvements:
+
+  * Add search
+  * Add error handling (try-catch)
+
+---
+
+# 🔥 TIP SA PRESENTATION
+
+* Huwag ilagay lahat ng code — **snippets lang**
+* Explain in simple terms
+* Focus sa:
+
+  * logic
+  * design
+  * interaction
+
+---
+
+Kung gusto mo next:
+👉 gagawan kita ng **script (what to say per slide)**
+👉 or **design suggestion (anong ilalagay sa visuals)** 😄
