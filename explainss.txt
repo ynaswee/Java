@@ -1,0 +1,326 @@
+Sige, explain natin **buong program mo step-by-step** (pang defense level 💯), tapos focus tayo sa **bubble sort kung paano siya gumagana sa code mo mismo**.
+
+---
+
+# 🧠 1. OVERALL PROGRAM FLOW
+
+## 🔹 Main idea:
+
+Ang program mo ay:
+
+> Nagmamanage ng delivery packages → add → sort (bubble sort) → display
+
+---
+
+## 🔁 MAIN LOOP
+
+```java
+do {
+    // menu
+    choice = Integer.parseInt(sc.nextLine());
+
+    switch(choice) {
+        case 1: addPackage();
+        case 2: sortPackages();
+        case 3: displayPackages();
+    }
+
+} while (choice != 4);
+```
+
+### 💡 Meaning:
+
+* Paulit-ulit ang program (loop)
+* Hihinto lang kapag pinili ang **Exit (4)**
+
+---
+
+# 📦 2. PACKAGE CLASS (DATA MODEL)
+
+```java
+class Package {
+    private String id;
+    private String recipientName;
+    private double weight;
+}
+```
+
+### 💡 Role:
+
+👉 Siya ang **object na nagre-represent ng isang package**
+
+---
+
+## 🔹 toString()
+
+```java
+@Override
+public String toString() {
+    return String.format("%-10s %-20s %-10.2f", id, recipientName, weight);
+}
+```
+
+### 💡 Meaning:
+
+* Siya ang bahala kung paano i-display ang object
+* Kapag ginawa mo:
+
+```java
+System.out.println(p);
+```
+
+👉 Automatic tatawag `toString()`
+
+---
+
+# ➕ 3. ADD PACKAGE
+
+```java
+packages.add(new Package(id, name, weight));
+```
+
+### 💡 Flow:
+
+1. User input
+2. Validation (empty / duplicate / positive weight)
+3. Gumagawa ng object:
+
+   ```
+   new Package(...)
+   ```
+4. Nilalagay sa:
+
+   ```
+   ArrayList<Package>
+   ```
+
+---
+
+# 📋 4. DISPLAY PACKAGES
+
+```java
+for (Package p : packages) {
+    System.out.println(p);
+}
+```
+
+👉 Each object → tatawag ng `toString()`
+
+---
+
+# 🔥 5. MAIN PART: BUBBLE SORT (IMPORTANT 🔥)
+
+Ito na yung pinaka core ng program mo.
+
+---
+
+## 🔹 STEP 1: User choice
+
+```java
+int type = Integer.parseInt(sc.nextLine());  // ano isosort
+int order = Integer.parseInt(sc.nextLine()); // ascending/descending
+```
+
+---
+
+## 🔹 STEP 2: Double Loop (Bubble Sort)
+
+```java
+for (int i = 0; i < packages.size() - 1; i++) {
+    for (int j = 0; j < packages.size() - i - 1; j++) {
+```
+
+### 💡 Meaning:
+
+#### Outer loop (`i`)
+
+👉 Ilang beses uulit ang sorting
+👉 (n-1 passes)
+
+#### Inner loop (`j`)
+
+👉 Nagko-compare ng **magkatabing elements**
+
+---
+
+## 🔹 STEP 3: Get objects
+
+```java
+Package p1 = packages.get(j);
+Package p2 = packages.get(j + 1);
+```
+
+👉 Magkatabing packages
+
+---
+
+## 🔹 STEP 4: Decide kung mag-swap
+
+```java
+boolean swap = false;
+
+switch(type) {
+    case 1: swap = compareString(p1.getId(), p2.getId(), ascending);
+    case 2: swap = compareString(name, name, ascending);
+    case 3: swap = compareDouble(p1.getWeight(), p2.getWeight(), ascending);
+}
+```
+
+---
+
+## 🔹 STEP 5: Compare Logic
+
+```java
+return asc ? a > b : a < b;
+```
+
+### 💡 Meaning:
+
+| Order      | Condition       |
+| ---------- | --------------- |
+| Ascending  | swap if p1 > p2 |
+| Descending | swap if p1 < p2 |
+
+---
+
+## 🔹 STEP 6: Swap
+
+```java
+if (swap) {
+    packages.set(j, p2);
+    packages.set(j + 1, p1);
+}
+```
+
+👉 Pinagpapalit ang position
+
+---
+
+# 🧠 Paano gumagana ang bubble sort (actual concept)
+
+## 🔥 IDEA:
+
+> Pinapa-"bubble" pataas ang pinakamalaking value bawat pass
+
+---
+
+## 🔹 Example (weight sorting ascending)
+
+Initial:
+
+```
+[15, 12, 8]
+```
+
+---
+
+### 🔁 PASS 1:
+
+Compare:
+
+```
+15 vs 12 → swap → [12, 15, 8]
+15 vs 8  → swap → [12, 8, 15]
+```
+
+👉 Largest (15) nasa dulo na
+
+---
+
+### 🔁 PASS 2:
+
+```
+12 vs 8 → swap → [8, 12, 15]
+```
+
+---
+
+### ✅ Final:
+
+```
+[8, 12, 15]
+```
+
+---
+
+# 🔄 Paano ito nangyayari sa code mo
+
+## Iteration mapping:
+
+| Code        | Meaning          |
+| ----------- | ---------------- |
+| `i` loop    | number of passes |
+| `j` loop    | comparison       |
+| `get(j)`    | current          |
+| `get(j+1)`  | next             |
+| `if (swap)` | decision         |
+| `set()`     | actual swap      |
+
+---
+
+# ⚡ IMPORTANT LINE (core ng bubble sort mo)
+
+```java
+for (int j = 0; j < packages.size() - i - 1; j++)
+```
+
+### 💡 Bakit may `- i - 1`?
+
+👉 Dahil:
+
+* bawat pass → may isang element na sorted na sa dulo
+* hindi na siya kailangan i-compare ulit
+
+---
+
+# 🧠 SIMPLE EXPLANATION (pang defense 💯)
+
+Pwede mong sabihin ito:
+
+> The program uses bubble sort to arrange the packages by repeatedly comparing adjacent elements and swapping them if they are in the wrong order. This process continues for multiple passes until the list is fully sorted. The comparison depends on the user’s choice, such as ID, name, or weight, and whether the order is ascending or descending.
+
+---
+
+# 🔗 FULL INTERACTION FLOW
+
+```
+User input
+   ↓
+Main Menu
+   ↓
+Method (add / sort / display)
+   ↓
+ArrayList<Package>
+   ↓
+Bubble Sort (compare + swap)
+   ↓
+Display (toString)
+```
+
+---
+
+# 🔥 FINAL SUMMARY
+
+✔ `Package` → data holder
+✔ `ArrayList` → storage
+✔ `Main` → controller
+✔ `Bubble Sort` → sorting engine
+✔ `toString()` → display formatter
+
+---
+
+## 💬 LAST TIP (pang sure pass 😄)
+
+Kapag tinanong:
+
+👉 *“Explain bubble sort in your program”*
+
+Sagutin mo:
+
+> In my program, bubble sort works by comparing adjacent Package objects based on the selected attribute, and swapping them if needed. This is repeated using nested loops until all elements are sorted.
+
+---
+
+Kung gusto mo next:
+👉 pwede kita i-quiz (mock defense questions 🔥)
+👉 or i-trace natin actual values step-by-step gamit example mo 😄
