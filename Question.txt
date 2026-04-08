@@ -1,0 +1,206 @@
+
+---
+
+# 🎯 HOW TO HIT ALL CRITERIA (GUIDE MO NA ITO)
+
+Hahatiin natin base sa rubric mo:
+
+---
+
+# 🟢 1. JAVA PROGRAM & AI UTILIZATION (20 pts)
+
+### 📌 Ano hinahanap:
+
+* OOP ✔
+* Gumagana ✔
+* May data structure ✔
+* May magandang prompt ✔
+
+---
+
+## ✅ Ano sasabihin mo:
+
+👉 **Prompt Strategy**
+
+> We designed a structured prompt that clearly defines the requirements such as using a Package class, ArrayList for storage, and implementing bubble sort manually with user-controlled sorting options.
+
+---
+
+👉 **OOP Implementation**
+
+> The program follows object-oriented principles by using a Package class to encapsulate data and behavior, while the main class handles user interaction and program flow.
+
+---
+
+👉 **Data Structure**
+
+> We used an ArrayList to dynamically store and manage multiple package objects, allowing flexible data handling.
+
+---
+
+# 🟡 2. PRESENTATION CONTENT (40 pts)
+
+### 📌 Kailangan mong ma-explain:
+
+* Prompt
+* Sorting algorithm
+* OOP interaction
+* Data structure
+
+---
+
+## 🔥 PERFECT FLOW NG PRESENTATION MO
+
+### 🔹 A. Prompt Explanation (short lang)
+
+> Our prompt specifies the creation of a delivery package system using Java, with sorting capabilities and user interaction through a menu.
+
+---
+
+### 🔹 B. Data Structure (important 🔥)
+
+> The program uses an ArrayList to store Package objects. This allows dynamic resizing and easy access to elements during sorting.
+
+---
+
+### 🔹 C. OOP Interaction (SUPER IMPORTANT 🔥)
+
+👉 Sabihin mo ito:
+
+> The Package class acts as the model that holds the data. The DeliveryManager class acts as the controller, handling user input and operations. These objects interact through method calls such as getters and the toString method.
+
+---
+
+### 🔹 D. Sorting Algorithm (ito pinaka core mo 🔥)
+
+👉 Sabihin mo ito:
+
+> The program uses bubble sort, which works by repeatedly comparing adjacent elements and swapping them if they are in the wrong order.
+
+---
+
+👉 Then explain simply:
+
+> It uses two loops: the outer loop controls the number of passes, while the inner loop compares adjacent packages. If the condition is met, the objects are swapped.
+
+---
+
+# 🔴 3. TECHNICAL DISCUSSION (40 pts)
+
+### 📌 Kailangan:
+
+* Detailed explanation
+* Real-world application
+
+---
+
+## 🔥 Real-world explanation (ETO GAMITIN MO)
+
+> In a real-world logistics system, packages need to be organized based on priority, destination, or weight. Our program simulates this by allowing sorting based on different attributes, helping optimize delivery processing and organization.
+
+---
+
+## 🔥 Deep explanation (pang mataas score)
+
+👉 Sabihin mo:
+
+> Bubble sort was chosen because it is simple and effective for small datasets, and it clearly demonstrates the concept of comparison and swapping.
+
+---
+
+# 🟣 4. INDIVIDUAL - TECHNICAL COMPREHENSION (40 pts)
+
+### 📌 Dito ka tinitira ng prof 😅
+
+---
+
+## 🔥 Dapat kaya mong sagutin:
+
+### ❓ Bakit may `n - i - 1`?
+
+👉 Sagot:
+
+> Because after each pass, the largest element is already placed at the end, so it no longer needs to be compared.
+
+---
+
+### ❓ Bakit ArrayList?
+
+👉
+
+> It allows dynamic resizing and easier manipulation compared to arrays.
+
+---
+
+### ❓ Bakit may getters?
+
+👉
+
+> To follow encapsulation and control access to the object's data.
+
+---
+
+---
+
+# 🔵 5. Q&A ADAPTABILITY (25 pts) 🔥
+
+Ito pinaka-delikado 😄
+
+---
+
+## 🔥 Common tricky questions + sagot
+
+### ❓ “Bakit bubble sort hindi ibang algorithm?”
+
+👉
+
+> Because it is simple to implement and suitable for demonstrating sorting logic, especially for small datasets.
+
+---
+
+### ❓ “Ano time complexity?”
+
+👉
+
+> The time complexity is O(n²) in the worst and average case.
+
+---
+
+### ❓ “Ano mangyayari kung maraming data?”
+
+👉
+
+> It becomes inefficient because bubble sort is not optimal for large datasets.
+
+---
+
+### ❓ “Pwede ba ito i-improve?”
+
+👉
+
+> Yes, we can use more efficient algorithms like quicksort or mergesort.
+
+---
+
+---
+
+# 🧠 FINAL SCRIPT (READY KA NA DITO 🔥)
+
+Pwede mong i-memorize / i-paraphrase:
+
+> Our program is a delivery package manager that uses object-oriented programming principles. We created a Package class to encapsulate data, and used an ArrayList to store multiple package objects. The main functionality of the program is sorting using the bubble sort algorithm, which repeatedly compares adjacent elements and swaps them based on user-defined criteria such as ID, name, or weight. This simulates real-world logistics systems where packages need to be organized efficiently.
+
+---
+
+# 🔥 FINAL TIP (IMPORTANT)
+
+👉 Para makakuha ng mataas:
+
+✔ Explain **simple but confident**
+✔ Huwag masyadong technical agad
+✔ Then kapag tinanong → saka mag deep dive
+
+---
+
+
+
