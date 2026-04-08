@@ -161,7 +161,8 @@ int order = Integer.parseInt(sc.nextLine());
             }
         }
 
-        System.out.println("Packages sorted successfully!");
+        System.out.println("Packages sorted successfully!\n");
+         displayPackages();
     }
 
     // ================= DISPLAY =================
