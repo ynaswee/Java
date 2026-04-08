@@ -1,0 +1,18 @@
+PROMPT 
+✨ FINAL REFINED PROMPT (FOCUSED VERSION)
+Write a Java program that manages delivery packages. Create a Package class with attributes: ID, recipient name, and weight (in kilograms), including constructors, getters, and setters and a toString() method for formatted output.
+
+Use an ArrayList to store multiple packages. Allow the user to input package details with proper validation (ID and name must not be empty, and weight must be a positive number). 
+
+Implement a bubble sort algorithm manually (without using built-in sorting methods) that can sort the packages by ID, recipient name (case-insensitive), or weight, based on the user’s choice. The user should also choose between ascending or descending order.
+
+Provide a menu-driven interface with the following options:
+
+Add packages
+Sort packages
+Display packages
+Exit
+
+Display the packages using toString () method.
+
+Additionally, prevent duplicate package IDs.
