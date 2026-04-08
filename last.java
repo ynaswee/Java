@@ -112,15 +112,17 @@ public class DeliveryManager {
         }
 
         System.out.println("\nSort by:");
-        System.out.println("1. ID");
-        System.out.println("2. Recipient Name");
-        System.out.println("3. Weight");
-        int type = Integer.parseInt(sc.nextLine());
+System.out.println("1. ID");
+System.out.println("2. Recipient Name");
+System.out.println("3. Weight");
+System.out.print("Enter choice: ");  // ✅ prompt added
+int type = Integer.parseInt(sc.nextLine());
 
-        System.out.println("Order:");
-        System.out.println("1. Ascending");
-        System.out.println("2. Descending");
-        int order = Integer.parseInt(sc.nextLine());
+System.out.println("Order:");
+System.out.println("1. Ascending");
+System.out.println("2. Descending");
+System.out.print("Enter choice: ");  // ✅ prompt added
+int order = Integer.parseInt(sc.nextLine());
 
         boolean ascending = (order == 1);
 
