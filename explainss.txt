@@ -321,6 +321,222 @@ Sagutin mo:
 
 ---
 
-Kung gusto mo next:
-👉 pwede kita i-quiz (mock defense questions 🔥)
-👉 or i-trace natin actual values step-by-step gamit example mo 😄
+----------------------------------------------
+
+
+# 🧠 OOP PRINCIPLES SA CODE MO
+
+Sa program mo, mainly ginagamit mo ang:
+
+1. **Encapsulation**
+2. **Abstraction**
+3. (Light use ng) **Modularity / Separation of Concerns**
+
+---
+
+## 🔹 1. ENCAPSULATION (Pinaka-importante dito)
+
+### 👉 Saan makikita?
+
+Sa `Package` class:
+
+```java
+class Package {
+    private String id;
+    private String recipientName;
+    private double weight;
+```
+
+### 💡 Meaning:
+
+* Ginawa mong **private** ang data
+* Hindi pwedeng direkta itong galawin sa labas
+
+---
+
+### 👉 Paano ina-access?
+
+```java
+public String getId() {
+    return id;
+}
+```
+
+➡️ Gumagamit ka ng **getters**
+
+---
+
+### 🔥 Explanation (pang defense):
+
+> Encapsulation is applied by making the fields private and providing controlled access through getter methods. This protects the data from unintended modification.
+
+---
+
+## 🔹 2. ABSTRACTION
+
+### 👉 Saan makikita?
+
+Sa paggamit ng methods tulad ng:
+
+* `addPackage()`
+* `sortPackages()`
+* `displayPackages()`
+
+---
+
+### 💡 Meaning:
+
+Hindi na iniisip ng user:
+
+* paano nagso-sort
+* paano nagva-validate
+
+➡️ Ang alam lang niya:
+
+* “Add”
+* “Sort”
+* “Display”
+
+---
+
+### 🔥 Example:
+
+```java
+sortPackages();
+```
+
+👉 Hindi mo na iniisip inside:
+
+* may bubble sort
+* may swapping
+* may loops
+
+---
+
+### 🧠 Defense explanation:
+
+> Abstraction is used by hiding the internal implementation of operations like sorting and displaying, and exposing only simple method calls.
+
+---
+
+## 🔹 3. MODULARITY (Separation of Concerns)
+
+### 👉 Saan makikita?
+
+Hiniwalay mo yung logic:
+
+| Method              | Responsibility     |
+| ------------------- | ------------------ |
+| `addPackage()`      | input + validation |
+| `sortPackages()`    | sorting logic      |
+| `displayPackages()` | output             |
+| `compareString()`   | comparison logic   |
+
+---
+
+### 💡 Meaning:
+
+➡️ Bawat method may **isang purpose lang**
+
+---
+
+### 🔥 Defense answer:
+
+> The program is modular because each method has a specific responsibility, making the code easier to maintain and understand.
+
+---
+
+# 🔗 PAANO SILA NAG-IINTERACT
+
+Ito yung pinaka important 👇
+
+---
+
+## 🔁 FLOW NG PROGRAM
+
+### 1. MAIN METHOD (Controller)
+
+```java
+switch (choice) {
+    case 1: addPackage();
+```
+
+👉 Siya ang **nagco-control ng flow**
+
+---
+
+### 2. ADD PACKAGE
+
+```java
+packages.add(new Package(id, name, weight));
+```
+
+👉 Gumagawa ka ng **object ng Package class**
+
+---
+
+### 3. PACKAGE CLASS
+
+```java
+new Package(...)
+```
+
+👉 Siya ang:
+
+* nagho-hold ng data
+* may sariling behavior (`toString()`)
+
+---
+
+### 4. SORTING
+
+```java
+Package p1 = packages.get(j);
+```
+
+👉 Kinukuha mo yung objects
+👉 Ginagamit mo getters:
+
+```java
+p1.getWeight()
+```
+
+---
+
+### 5. DISPLAY
+
+```java
+System.out.println(p);
+```
+
+👉 Automatic tatawag:
+
+```java
+p.toString()
+```
+
+---
+
+# 🔄 SIMPLE INTERACTION DIAGRAM (mental model)
+
+```
+User → Main Menu → Method (add/sort/display)
+                    ↓
+              ArrayList<Package>
+                    ↓
+              Package Objects
+                    ↓
+         getters / toString()
+```
+
+---
+
+# 💡 ISANG MALINAW NA SUMMARY (pang defense 💯)
+
+Pwede mong sabihin ito:
+
+> The program applies object-oriented programming principles such as encapsulation by keeping data private and accessing it through getters. Abstraction is used by separating functionalities into methods like adding, sorting, and displaying packages. The Package class represents the data model, while the main class controls the flow and interacts with the objects through an ArrayList.
+
+---
+
+
