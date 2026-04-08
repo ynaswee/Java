@@ -1,0 +1,227 @@
+Yes 😄🔥—gagawan kita ng **mismong ilalagay mo sa PPT (ready to copy-paste per slide)**. Maikli, clear, at pang-defense na.
+
+---
+
+# 🎤 PPT CONTENT (READY TO USE)
+
+---
+
+## 🟣 SLIDE 1: TITLE
+
+**Delivery Package Manager using Bubble Sort**
+
+* Members:
+* Subject:
+* Instructor:
+* Date:
+
+---
+
+## 🟣 SLIDE 2: INTRODUCTION
+
+This program is a Java-based system that manages delivery packages.
+It allows users to:
+
+* Add package details
+* Sort packages using Bubble Sort
+* Display packages in a formatted output
+
+---
+
+## 🟣 SLIDE 3: ACTUAL PROMPT
+
+The program requires:
+
+* A `Package` class with ID, recipient name, and weight
+* Use of `ArrayList` to store data
+* Implementation of Bubble Sort (manual)
+* Menu-driven interface
+* Input validation and formatted display
+
+---
+
+## 🟣 SLIDE 4: IDEA OF THE PROGRAM
+
+The idea was based on:
+
+* Real-world delivery/logistics systems
+* Need to organize packages efficiently
+
+Bubble Sort was chosen because:
+
+* It is simple to implement
+* Easy to understand for beginners
+
+---
+
+## 🟣 SLIDE 5: PROGRAM OVERVIEW
+
+The program uses a menu system:
+
+1. Add Package
+2. Sort Packages
+3. Display Packages
+4. Exit
+
+Data is stored using `ArrayList<Package>`
+
+---
+
+# 🔵 SORTING ALGORITHM
+
+## 🟣 SLIDE 6: WHAT IS BUBBLE SORT
+
+Bubble Sort is a sorting algorithm that:
+
+* Compares adjacent elements
+* Swaps them if needed
+* Repeats the process until sorted
+
+---
+
+## 🟣 SLIDE 7: HOW BUBBLE SORT WORKS
+
+Steps:
+
+1. Compare two adjacent elements
+2. Swap if they are in the wrong order
+3. Move to the next pair
+4. Repeat until no swaps are needed
+
+---
+
+## 🟣 SLIDE 8: BUBBLE SORT CODE
+
+```java
+for (int i = 0; i < packages.size() - 1; i++) {
+    for (int j = 0; j < packages.size() - i - 1; j++) {
+        if (condition) {
+            // swap elements
+        }
+    }
+}
+```
+
+* Outer loop = number of passes
+* Inner loop = comparisons
+
+---
+
+## 🟣 SLIDE 9: SORTING OPTIONS
+
+The user can sort by:
+
+* ID
+* Recipient Name
+* Weight
+
+The user can also choose:
+
+* Ascending order
+* Descending order
+
+---
+
+# 🟢 OBJECT-ORIENTED PROGRAMMING
+
+## 🟣 SLIDE 10: ENCAPSULATION
+
+Encapsulation is used by:
+
+* Making fields private
+* Accessing them through getters
+
+This protects the data from direct modification.
+
+---
+
+## 🟣 SLIDE 11: ABSTRACTION
+
+Abstraction is shown through methods:
+
+* `addPackage()`
+* `sortPackages()`
+* `displayPackages()`
+
+The user interacts with simple options without seeing internal logic.
+
+---
+
+## 🟣 SLIDE 12: OBJECT INTERACTION
+
+The program consists of:
+
+* `Package` class → holds data
+* `ArrayList` → stores objects
+* Main class → controls the program
+
+Flow:
+User → Menu → Methods → Package Objects
+
+---
+
+## 🟣 SLIDE 13: toString() METHOD
+
+The `toString()` method is used to:
+
+* Format output
+* Display package details neatly
+
+Example:
+
+```java
+System.out.println(p);
+```
+
+This automatically calls `toString()`.
+
+---
+
+# 🟡 DATA STRUCTURE
+
+## 🟣 SLIDE 14: DATA STRUCTURE USED
+
+The program uses:
+
+* `ArrayList<Package>`
+
+Reasons:
+
+* Dynamic size
+* Easy to add and access data
+
+---
+
+## 🟣 SLIDE 15: DATA ORGANIZATION
+
+* Each package is an object
+* Stored inside an ArrayList
+* Sorted using Bubble Sort
+
+---
+
+## 🟣 SLIDE 16: CONCLUSION
+
+The program demonstrates:
+
+* Implementation of Bubble Sort
+* Use of Object-Oriented Programming
+* Structured data management
+
+Possible improvements:
+
+* Add search feature
+* Add error handling
+
+---
+
+# 🔥 BONUS TIP (IMPORTANT)
+
+👉 Sa slides:
+
+* Huwag masyadong maraming text
+* Lagyan ng icons or diagrams
+* I-explain verbally yung details
+
+---
+
