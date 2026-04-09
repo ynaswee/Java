@@ -43,7 +43,7 @@ public class DeliveryManager {
             System.out.println("2. Sort Packages");
             System.out.println("3. Display Packages");
             System.out.println("4. Exit");
-            System.out.print("Enter choice: ");
+            System.out.println("Enter choice: ");
 
             choice = Integer.parseInt(sc.nextLine()); // parse from line
 
@@ -118,7 +118,7 @@ System.out.println("3. Weight");
 System.out.print("Enter choice: ");  // ✅ prompt added
 int type = Integer.parseInt(sc.nextLine());
 
-System.out.println("Order:");
+System.out.println("\nOrder:");
 System.out.println("1. Ascending");
 System.out.println("2. Descending");
 System.out.print("Enter choice: ");  // ✅ prompt added
