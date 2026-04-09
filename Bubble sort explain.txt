@@ -1,0 +1,183 @@
+
+# **2️⃣ Check kung may laman ang list**
+
+if (packages.size() == 0) {
+    System.out.println("No packages to sort!");
+    return;
+}
+```
+
+* `packages.size()` → bilang ng items sa list
+* Kung `0` → wala kang pwedeng i-sort
+* `return;` → agad na lalabas sa method
+
+> Pang-defense: prevents errors and avoids sorting an empty list.
+
+---
+
+# **3️⃣ User prompt for sorting type**
+
+System.out.println("\nSort by:");
+System.out.println("1. ID");
+System.out.println("2. Recipient Name");
+System.out.println("3. Weight");
+System.out.print("Enter choice: ");  // ✅ prompt added
+int type = Integer.parseInt(sc.nextLine());
+```
+
+* Pinapakita ang **options** kung anong field gusto i-sort
+* `Integer.parseInt(sc.nextLine())` → converts user input string into int
+* `type` variable → stores **which field to sort by**
+
+
+---
+
+# **4️⃣ User prompt for order**
+
+
+System.out.println("Order:");
+System.out.println("1. Ascending");
+System.out.println("2. Descending");
+System.out.print("Enter choice: ");  // ✅ prompt added
+int order = Integer.parseInt(sc.nextLine());
+```
+
+* User pumipili kung **ascending or descending**
+* `order` variable → stores choice
+
+boolean ascending = (order == 1);
+```
+
+* True → ascending
+* False → descending
+
+---
+
+# **5️⃣ Bubble sort algorithm**
+
+for (int i = 0; i < packages.size() - 1; i++) {
+    for (int j = 0; j < packages.size() - i - 1; j++) {
+```
+
+* **Outer loop (`i`)** → counts number of passes (total = n-1)
+* **Inner loop (`j`)** → compares adjacent items
+* `packages.size() - i - 1` → optimization → last elements already sorted sa previous pass
+
+---
+
+# **6️⃣ Access current and next package**
+
+Package p1 = packages.get(j);
+Package p2 = packages.get(j + 1);
+```
+
+* `p1` → current element
+* `p2` → next element
+* Parehong `Package` object
+
+---
+
+# **7️⃣ Decide if swap is needed**
+
+boolean swap = false;
+switch (type) {
+    case 1: // ID
+        swap = compareString(p1.getId(), p2.getId(), ascending);
+        break;
+    case 2: // Name
+        swap = compareString(p1.getRecipientName().toLowerCase(),                       p2.getRecipientName().toLowerCase(),ascending);
+        break;
+    case 3: // Weight
+        swap = compareDouble(p1.getWeight(), p2.getWeight(), ascending);
+        break;
+    default:
+        System.out.println("Invalid sort type!");
+        return;
+}
+```
+
+### 🔹 How swapping decision works:
+
+1. compareString → returns true if elements need to be swapped based on ascending/descending
+2. .toLowerCase() → ensures case-insensitive sort for names
+3. compareDouble → for numerical comparison of weights
+
+> Pang-defense: separates comparison logic from actual swap, makes code clean.
+
+---
+
+# **8️⃣ Perform swap**
+
+if (swap) {
+    packages.set(j, p2);
+    packages.set(j + 1, p1);
+}
+```
+
+* `set(index, value)` → replaces element sa ArrayList
+* Swaps `p1` and `p2` kung `swap == true`
+
+---
+
+# **9️⃣ After sorting**
+
+```java id="htmec1"
+System.out.println("Packages sorted successfully!\n");
+displayPackages();
+```
+
+* Prints confirmation
+* Calls `displayPackages()` → prints all packages nicely using `toString()`
+
+> Pang-defense: automatic display makes program user-friendly
+
+---
+
+# **🔑 Key concepts demonstrated**
+
+1. **Input handling**
+
+   * parseInt + nextLine + prompt
+
+2. **Sorting logic**
+
+   * Bubble sort → nested loops + swap mechanism
+   * Supports ascending/descending
+   * Supports sorting by multiple fields
+
+3. **Separation of concerns**
+
+   * `compareString` / `compareDouble` → handles only comparison
+   * `displayPackages` → handles only display
+
+4. **OOP**
+
+   * `Package` objects stored in ArrayList
+   * `toString()` used for formatted output
+
+---
+
+# **📊 Visual flow of one iteration**
+
+Suppose we have 3 packages:
+
+| j | p1   | p2   | swap? |
+| - | ---- | ---- | ----- |
+| 0 | P002 | P001 | true  |
+| 1 | P002 | P003 | false |
+
+* Swap occurs → P001 moves before P002
+* Next inner iteration compares P002 & P003
+
+Repeat until fully sorted
+
+---
+
+# **💬 Pang-defense summary**
+
+> This method sorts all Package objects in the ArrayList using bubble sort.
+> The user selects which field to sort by and the order (ascending or descending).
+> The algorithm iterates through the list, compares adjacent objects, swaps them if necessary, and finally displays the sorted packages using the overridden toString() method.
+
+---
+
